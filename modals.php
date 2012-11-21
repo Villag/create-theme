@@ -181,30 +181,4 @@ global $current_user;
 	
 </div><!-- .modal -->
 
-<div class="reveal-modal" id="feedback" >
-	
-	<div class="modal-header">
-		
-		<a class="close-reveal-modal">×</a>
-		
-		<h3>Feedback</h3>
-		
-	</div>
-	
-	<div class="modal-body">
-	
-		<div class="row-fluid">
-			
-			<div class="span12">
-	
-			<?php echo do_shortcode('[gravityform name="Feedback" title=false description=true ajax=true]'); ?>			
-				
-			</div>
-			
-		</div><!-- .row-fluid -->
-		
-	</div>
-	
-</div><!-- .modal -->
-
 <?php get_template_part( 'card-back' ); // Loads card-back.php ?>
