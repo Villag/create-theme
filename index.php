@@ -1,13 +1,21 @@
-<?php get_header(); // Loads the header.php template. ?>
+<?php get_template_part('templates/page', 'header'); ?>
 
-	<div id="content" class="hfeed container">
+<?php if (!have_posts()) : ?>
+  <div class="alert alert-warning">
+    <?php _e('Sorry, no results were found.', 'roots'); ?>
+  </div>
+  <?php get_search_form(); ?>
+<?php endif; ?>
 
-		<?php get_template_part( 'loop-meta' ); // Loads the loop-meta.php template. ?>
+<?php while (have_posts()) : the_post(); ?>
+  <?php get_template_part('templates/content', get_post_format()); ?>
+<?php endwhile; ?>
 
-		<?php get_template_part( 'loop' ); // Loads the loop.php template. ?>
-
-		<?php get_template_part( 'loop-nav' ); // Loads the loop-nav.php template. ?>
-
-	</div><!-- #content -->
-
-<?php get_footer(); // Loads the footer.php template. ?>
+<?php if ($wp_query->max_num_pages > 1) : ?>
+  <nav class="post-nav">
+    <ul class="pager">
+      <li class="previous"><?php next_posts_link(__('&larr; Older posts', 'roots')); ?></li>
+      <li class="next"><?php previous_posts_link(__('Newer posts &rarr;', 'roots')); ?></li>
+    </ul>
+  </nav>
+<?php endif; ?>
