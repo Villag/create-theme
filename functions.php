@@ -104,8 +104,6 @@ add_action( 'init', 'create_head_cleanup' );
  * Enqueue scripts and styles.
  */
 function create_scripts() {
-	wp_enqueue_style( '_s-style', get_stylesheet_uri() );
-
 	// Queue CSS
 	wp_enqueue_style( 'bootstrap',			get_stylesheet_directory_uri() .'/assets/css/bootstrap.min.css' );
 	wp_enqueue_style( 'bootstrap-responsive', get_stylesheet_directory_uri() .'/assets/css/bootstrap-responsive.min.css' );
