@@ -30,7 +30,7 @@
 							<li class="website"><a href="{{website}}" target="_blank" class="url" itemprop="url" rel="me self external">{{website}}</a></li>
 						{{/if}}
 						{{#if twitter}}
-							<li class="twitter"><a href="http://twitter.com/{{twitter}}" target="_blank"><i class="icon-twitter"></i> {{twitter}}</a>
+							<li class="twitter"><a href="http://twitter.com/{{twitter}}" target="_blank"><i class="icon-twitter"></i> {{twitter}}</a></li>
 						{{/if}}
 						
 						<?php if( is_user_logged_in() ) { ?>
