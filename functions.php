@@ -37,14 +37,14 @@ function create_setup() {
 
 	// Disable admin bar on front-end
 	add_action( 'show_admin_bar', '__return_false' );
-	
+
 	// Register profile sidebar
 	register_sidebar(array(
 		'name' => __( 'Profile' ),
 		'id' => 'profile',
 		'description' => __( 'Widgets in this area will be shown on the right-hand side.' )
 	));
-	
+
 	// Enable support for HTML5 markup.
 	add_theme_support( 'html5', array(
 		'comment-list',
@@ -56,6 +56,49 @@ function create_setup() {
 }
 endif; // _s_setup
 add_action( 'after_setup_theme', 'create_setup' );
+
+/**
+ * Clean up wp_head()
+ *
+ * Remove unnecessary <link>'s
+ * Remove inline CSS used by Recent Comments widget
+ * Remove inline CSS used by posts with galleries
+ * Remove self-closing tag and change ''s to "'s on rel_canonical()
+ */
+function create_head_cleanup() {
+	// Originally from http://wpengineer.com/1438/wordpress-header/
+	remove_action( 'wp_head', 'feed_links', 2 );
+	remove_action( 'wp_head', 'feed_links_extra', 3 );
+	remove_action( 'wp_head', 'rsd_link' );
+	remove_action( 'wp_head', 'wlwmanifest_link' );
+	remove_action( 'wp_head', 'adjacent_posts_rel_link_wp_head', 10, 0 );
+	remove_action( 'wp_head', 'wp_generator' );
+	remove_action( 'wp_head', 'wp_shortlink_wp_head', 10, 0) ;
+
+	global $wp_widget_factory;
+	remove_action( 'wp_head', array( $wp_widget_factory->widgets['WP_Widget_Recent_Comments'], 'recent_comments_style' ) );
+
+	if ( ! class_exists( 'WPSEO_Frontend' ) ) {
+		remove_action( 'wp_head', 'rel_canonical' );
+		add_action( 'wp_head', 'roots_rel_canonical' );
+	}
+}
+
+function roots_rel_canonical() {
+	global $wp_the_query;
+
+	if (!is_singular()) {
+		return;
+	}
+
+	if (!$id = $wp_the_query->get_queried_object_id()) {
+		return;
+	}
+
+	$link = get_permalink( $id );
+	echo "\t<link rel=\"canonical\" href=\"$link\">\n";
+}
+add_action( 'init', 'create_head_cleanup' );
 
 /**
  * Enqueue scripts and styles.
@@ -78,13 +121,13 @@ function create_scripts() {
 	wp_enqueue_script( 'isotope',						get_stylesheet_directory_uri() .'/assets/js/jquery.isotope.min.js',		array( 'jquery' ), '1.1', true );
 	wp_enqueue_script( 'foundation',					get_stylesheet_directory_uri() .'/assets/js/foundation.min.js',			array( 'jquery' ), '1.1', true );
 	wp_enqueue_script( 'iealert',						get_stylesheet_directory_uri() .'/assets/js/iealert.min.js',			array(), '1.1', true );
-	wp_enqueue_script( 'create-navigation',				get_template_directory_uri() .  '/assets/js/navigation.js',				array(), '1.1', true );
-	wp_enqueue_script( 'create-skip-link-focus-fix',	get_template_directory_uri() .  '/assets/js/skip-link-focus-fix.js',	array(), '1.1', true );
+	wp_enqueue_script( 'create-navigation',				get_template_directory_uri() .	'/assets/js/navigation.js',				array(), '1.1', true );
+	wp_enqueue_script( 'create-skip-link-focus-fix',	get_template_directory_uri() .	'/assets/js/skip-link-focus-fix.js',	array(), '1.1', true );
 	wp_enqueue_script( 'app',							get_stylesheet_directory_uri() .'/assets/js/app.js',					array( 'jquery' ), '1.1', true );
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
-	
+
 	wp_localize_script( 'app', 'create_theme', array( 'ajaxurl' => admin_url( 'admin-ajax.php' ) ) );
 }
 add_action( 'wp_enqueue_scripts', 'create_scripts' );
