@@ -65,9 +65,11 @@ $(document).ready(function() {
 
 						<?php } else { ?>
 
+						<ul class="dropdown-menu">
 							<li class="menu-item">			<a href="#about" data-modal-id="about" role="button" data-toggle="modal" >About</a></li>
 							<li class="menu-item">			<a href="#login" data-modal-id="about" role="button" data-toggle="modal" >Login</a></li>
 							<li class="menu-item">			<a href="#sign-up" data-modal-id="about" role="button" data-toggle="modal" >Sign Up</a></li>
+						</ul>
 
 						<?php } ?>
 
