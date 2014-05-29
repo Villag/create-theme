@@ -37,14 +37,14 @@ function create_setup() {
 
 	// Disable admin bar on front-end
 	add_action( 'show_admin_bar', '__return_false' );
-	
+
 	// Register profile sidebar
 	register_sidebar(array(
 		'name' => __( 'Profile' ),
 		'id' => 'profile',
 		'description' => __( 'Widgets in this area will be shown on the right-hand side.' )
 	));
-	
+
 	// Enable support for HTML5 markup.
 	add_theme_support( 'html5', array(
 		'comment-list',
@@ -84,7 +84,7 @@ function create_scripts() {
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
-	
+
 	wp_localize_script( 'app', 'create_theme', array( 'ajaxurl' => admin_url( 'admin-ajax.php' ) ) );
 }
 add_action( 'wp_enqueue_scripts', 'create_scripts' );
