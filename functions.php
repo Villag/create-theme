@@ -104,13 +104,11 @@ add_action( 'init', 'create_head_cleanup' );
  * Enqueue scripts and styles.
  */
 function create_scripts() {
-	wp_enqueue_style( '_s-style', get_stylesheet_uri() );
-
 	// Queue CSS
-	wp_enqueue_style( 'bootstrap',			get_stylesheet_directory_uri() .'/assets/css/bootstrap.min.css' );
-	wp_enqueue_style( 'bootstrap-responsive', get_stylesheet_directory_uri() .'/assets/css/bootstrap-responsive.min.css' );
-	wp_enqueue_style( 'create-style',		get_stylesheet_uri() );
-	wp_enqueue_style( 'iealertstyle',		get_stylesheet_directory_uri() .'/library/iealert/style.css' );
+	wp_enqueue_style( 'bootstrap',						get_stylesheet_directory_uri() .'/assets/css/bootstrap.min.css' );
+	wp_enqueue_style( 'bootstrap-responsive',			get_stylesheet_directory_uri() .'/assets/css/bootstrap-responsive.min.css' );
+	wp_enqueue_style( 'create-style',					get_stylesheet_uri() );
+	wp_enqueue_style( 'iealert-style',					get_stylesheet_directory_uri() .'/assets/js/iealert/style.css' );
 
 	// Queue JS
 	// Load Modernizr into the HEAD, before any other scripts
@@ -119,10 +117,8 @@ function create_scripts() {
 	wp_enqueue_script( 'jquery' );
 	wp_enqueue_script( 'bootstrap',						get_stylesheet_directory_uri() .'/assets/js/bootstrap.min.js',			array( 'jquery' ), '1.1', true );
 	wp_enqueue_script( 'isotope',						get_stylesheet_directory_uri() .'/assets/js/jquery.isotope.min.js',		array( 'jquery' ), '1.1', true );
-	wp_enqueue_script( 'foundation',					get_stylesheet_directory_uri() .'/assets/js/foundation.min.js',			array( 'jquery' ), '1.1', true );
-	wp_enqueue_script( 'iealert',						get_stylesheet_directory_uri() .'/assets/js/iealert.min.js',			array(), '1.1', true );
-	wp_enqueue_script( 'create-navigation',				get_template_directory_uri() .	'/assets/js/navigation.js',				array(), '1.1', true );
-	wp_enqueue_script( 'create-skip-link-focus-fix',	get_template_directory_uri() .	'/assets/js/skip-link-focus-fix.js',	array(), '1.1', true );
+	wp_enqueue_script( 'iealert',						get_stylesheet_directory_uri() .'/assets/js/iealert/iealert.min.js',	array(), '1.1', true );
+	wp_enqueue_script( 'create-skip-link-focus-fix',	get_template_directory_uri() . '/assets/js/skip-link-focus-fix.js',		array(), '1.1', true );
 	wp_enqueue_script( 'app',							get_stylesheet_directory_uri() .'/assets/js/app.js',					array( 'jquery' ), '1.1', true );
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );

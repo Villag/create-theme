@@ -25,6 +25,7 @@ $(document).ready(function() {
 </head>
 
 <body <?php body_class(); ?>>
+<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', '_s' ); ?></a>
 <header id="masthead" class="site-header" role="banner">
 
 	<nav id="site-navigation" class="navbar navbar-inverse row-fluid" role="navigation">
@@ -33,13 +34,13 @@ $(document).ready(function() {
 				<a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'description' ) ); ?>" class="site-title" rel="home"><?php echo esc_html( get_bloginfo( 'description' ) ); ?></a></h1>
 			<div class="skip-link assistive-text"><a href="#content" title="<?php esc_attr_e( 'Skip to content', 'twentytwelve' ); ?>"><?php _e( 'Skip to content', 'twentytwelve' ); ?></a></div>
 			<div class="menu-primary-container">
-				
+
 				<a class="btn btn-navbar" data-toggle="collapse" data-target="#menu-secondary">
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 				</a>
-				
+
 				<ul id="menu-secondary" class="nav nav-collapse collapse pull-right">
 
 					<li class="dropdown">
@@ -73,7 +74,7 @@ $(document).ready(function() {
 					</li>
 
 				</ul>
-				
+
 				<ul id="menu-primary" class="nav">
 					<li id="filter">
                     	<ul id="filters" class="option-set" data-option-key="filter">
