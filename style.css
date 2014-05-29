@@ -16,87 +16,87 @@ Use it to make something cool, have fun, and share what you've learned with othe
 */
 
 @font-face {
-    font-family: 'ArvoRegular';
-    src: url('assets/fonts/arvo/Arvo-Regular-webfont.eot');
-    src: url('assets/fonts/arvo/Arvo-Regular-webfont.eot?#iefix') format('embedded-opentype'),
-         url('assets/fonts/arvo/Arvo-Regular-webfont.woff') format('woff'),
-         url('assets/fonts/arvo/Arvo-Regular-webfont.ttf') format('truetype'),
-         url('assets/fonts/arvo/Arvo-Regular-webfont.svg#ArvoRegular') format('svg');
-    font-weight: normal;
-    font-style: normal;
+	font-family: 'ArvoRegular';
+	src: url('assets/fonts/arvo/Arvo-Regular-webfont.eot');
+	src: url('assets/fonts/arvo/Arvo-Regular-webfont.eot?#iefix') format('embedded-opentype'),
+		 url('assets/fonts/arvo/Arvo-Regular-webfont.woff') format('woff'),
+		 url('assets/fonts/arvo/Arvo-Regular-webfont.ttf') format('truetype'),
+		 url('assets/fonts/arvo/Arvo-Regular-webfont.svg#ArvoRegular') format('svg');
+	font-weight: normal;
+	font-style: normal;
 }
 
 @font-face {
-    font-family: 'ArvoItalic';
-    src: url('assets/fonts/arvo/Arvo-Italic-webfont.eot');
-    src: url('assets/fonts/arvo/Arvo-Italic-webfont.eot?#iefix') format('embedded-opentype'),
-         url('assets/fonts/arvo/Arvo-Italic-webfont.woff') format('woff'),
-         url('assets/fonts/arvo/Arvo-Italic-webfont.ttf') format('truetype'),
-         url('assets/fonts/arvo/Arvo-Italic-webfont.svg#ArvoItalic') format('svg');
-    font-weight: normal;
-    font-style: normal;
+	font-family: 'ArvoItalic';
+	src: url('assets/fonts/arvo/Arvo-Italic-webfont.eot');
+	src: url('assets/fonts/arvo/Arvo-Italic-webfont.eot?#iefix') format('embedded-opentype'),
+		 url('assets/fonts/arvo/Arvo-Italic-webfont.woff') format('woff'),
+		 url('assets/fonts/arvo/Arvo-Italic-webfont.ttf') format('truetype'),
+		 url('assets/fonts/arvo/Arvo-Italic-webfont.svg#ArvoItalic') format('svg');
+	font-weight: normal;
+	font-style: normal;
 }
 
 @font-face {
-    font-family: 'ArvoBold';
-    src: url('assets/fonts/arvo/Arvo-Bold-webfont.eot');
-    src: url('assets/fonts/arvo/Arvo-Bold-webfont.eot?#iefix') format('embedded-opentype'),
-         url('assets/fonts/arvo/Arvo-Bold-webfont.woff') format('woff'),
-         url('assets/fonts/arvo/Arvo-Bold-webfont.ttf') format('truetype'),
-         url('assets/fonts/arvo/Arvo-Bold-webfont.svg#ArvoBold') format('svg');
-    font-weight: normal;
-    font-style: normal;
+	font-family: 'ArvoBold';
+	src: url('assets/fonts/arvo/Arvo-Bold-webfont.eot');
+	src: url('assets/fonts/arvo/Arvo-Bold-webfont.eot?#iefix') format('embedded-opentype'),
+		 url('assets/fonts/arvo/Arvo-Bold-webfont.woff') format('woff'),
+		 url('assets/fonts/arvo/Arvo-Bold-webfont.ttf') format('truetype'),
+		 url('assets/fonts/arvo/Arvo-Bold-webfont.svg#ArvoBold') format('svg');
+	font-weight: normal;
+	font-style: normal;
 }
 
 @font-face {
-    font-family: 'ArvoBoldItalic';
-    src: url('assets/fonts/arvo/Arvo-BoldItalic-webfont.eot');
-    src: url('assets/fonts/arvo/Arvo-BoldItalic-webfont.eot?#iefix') format('embedded-opentype'),
-         url('assets/fonts/arvo/Arvo-BoldItalic-webfont.woff') format('woff'),
-         url('assets/fonts/arvo/Arvo-BoldItalic-webfont.ttf') format('truetype'),
-         url('assets/fonts/arvo/Arvo-BoldItalic-webfont.svg#ArvoBoldItalic') format('svg');
-    font-weight: normal;
-    font-style: normal;
+	font-family: 'ArvoBoldItalic';
+	src: url('assets/fonts/arvo/Arvo-BoldItalic-webfont.eot');
+	src: url('assets/fonts/arvo/Arvo-BoldItalic-webfont.eot?#iefix') format('embedded-opentype'),
+		 url('assets/fonts/arvo/Arvo-BoldItalic-webfont.woff') format('woff'),
+		 url('assets/fonts/arvo/Arvo-BoldItalic-webfont.ttf') format('truetype'),
+		 url('assets/fonts/arvo/Arvo-BoldItalic-webfont.svg#ArvoBoldItalic') format('svg');
+	font-weight: normal;
+	font-style: normal;
 }
 
 @font-face {
-    font-family: 'aaargh';
-    src: url('assets/fonts/aaargh/Aaargh-webfont.eot');
-    src: url('assets/fonts/aaargh/Aaargh-webfont.eot?#iefix') format('embedded-opentype'),
-         url('assets/fonts/aaargh/Aaargh-webfont.woff') format('woff'),
-         url('assets/fonts/aaargh/Aaargh-webfont.ttf') format('truetype'),
-         url('assets/fonts/aaargh/Aaargh-webfont.svg#aaarghnormal') format('svg');
-    font-weight: normal;
-    font-style: normal;
+	font-family: 'aaargh';
+	src: url('assets/fonts/aaargh/Aaargh-webfont.eot');
+	src: url('assets/fonts/aaargh/Aaargh-webfont.eot?#iefix') format('embedded-opentype'),
+		 url('assets/fonts/aaargh/Aaargh-webfont.woff') format('woff'),
+		 url('assets/fonts/aaargh/Aaargh-webfont.ttf') format('truetype'),
+		 url('assets/fonts/aaargh/Aaargh-webfont.svg#aaarghnormal') format('svg');
+	font-weight: normal;
+	font-style: normal;
 
 }
 
 html.js {
-    margin-top: 0 !important;
+	margin-top: 0 !important;
 }
 
 body {
-    background: #333;
-    font-family: "ArvoRegular";
+	background: #333;
+	font-family: "ArvoRegular";
 }
 a {
-    color: #fff;
+	color: #fff;
 }
 
 strong {
-    font-family: "ArvoBold";
+	font-family: "ArvoBold";
 }
 
 .navbar .brand {
-    letter-spacing: 0;
-    font-weight: 300;
-    margin: 0 20px 0 0;
-    padding: 0;
-    text-transform: uppercase;
-    word-spacing: -1px;
+	letter-spacing: 0;
+	font-weight: 300;
+	margin: 0 20px 0 0;
+	padding: 0;
+	text-transform: uppercase;
+	word-spacing: -1px;
 }
 .navbar .brand strong {
-    font-weight: 400;
+	font-weight: 400;
 }
 
 .navbar .site-title {
@@ -105,13 +105,13 @@ strong {
 }
 
 .navbar .nav > li.highlight > a {
-    background: #DF6E1E;
-    border-radius: 2px;
-    color: #fff;
-    font-size: 11px;
-    padding: 3px 5px;
-    margin: 7px 0 0;
-    text-transform: uppercase;
+	background: #DF6E1E;
+	border-radius: 2px;
+	color: #fff;
+	font-size: 11px;
+	padding: 3px 5px;
+	margin: 7px 0 0;
+	text-transform: uppercase;
 }
 
 #site-navigation {
@@ -153,15 +153,15 @@ figure {
 }
 
 .alert.alert-warning {
-    background: #DF6E1E;
-    border: none;
-    color: #fff;
-    text-shadow: none;
+	background: #DF6E1E;
+	border: none;
+	color: #fff;
+	text-shadow: none;
 }
 
 #the-creatives {
-    margin: 0;
-    padding: 0;
+	margin: 0;
+	padding: 0;
 }
 .item {
 	background: #eee;
@@ -170,16 +170,16 @@ figure {
 	border-top-right-radius: 20px;
 	color: #fff;
 	float: left;
-    height: 165px;
+	height: 165px;
 	margin: 0 6px 6px 0;
 	overflow: hidden;
 	padding: 4px;
 	position: relative;
-    width: 330px;
+	width: 330px;
 }
 .item .card {
-    overflow: hidden;
-    position: relative;
+	overflow: hidden;
+	position: relative;
 }
 .item .card:hover {
 	color: #e1e1e1;
@@ -194,72 +194,72 @@ figure {
 }
 .item .card .avatar {
 	border-radius: 4px 0px 0px 4px;
-    display: inline-block;
-    float: left;
-    height: auto;
-    max-width: 50%;
-    width: 100%;
-    z-index: 10;
+	display: inline-block;
+	float: left;
+	height: auto;
+	max-width: 50%;
+	width: 100%;
+	z-index: 10;
 }
 
 .item.person .card .fn {
-    bottom: 35px;
-    left: 0;
-    position: absolute;
-    text-transform: uppercase;
-    width: 100%;
-    z-index: 5;
+	bottom: 35px;
+	left: 0;
+	position: absolute;
+	text-transform: uppercase;
+	width: 100%;
+	z-index: 5;
 }
 .item.person .card .given-name {
-    display: block;
-    font-size: 18px;
-    font-weight: bold;
+	display: block;
+	font-size: 18px;
+	font-weight: bold;
 }
 .item.person .card .family-name {
-    display: block;
-    font-size: 14px;
+	display: block;
+	font-size: 14px;
 }
 .item.person .card .primary-job {
-    background: rgba(0, 0, 0, .5 );
+	background: rgba(0, 0, 0, .5 );
 	border-radius: 0px 0px 4px 0px;
-    bottom: 0;
-    font-size: 14px;
-    left: 0;
-    padding: 5px 0;
-    position: absolute;
-    width: 100%;
+	bottom: 0;
+	font-size: 14px;
+	left: 0;
+	padding: 5px 0;
+	position: absolute;
+	width: 100%;
 }
 .icon-twitter {
 	background: url('assets/img/icon-twitter.png') 0 0;
 }
 
 #sidebar {
-    background: none;
-    height: auto !important;
+	background: none;
+	height: auto !important;
 }
 #sidebar .option-set {
-    margin: 0;
-    padding: 0;
+	margin: 0;
+	padding: 0;
 }
 
 #sidebar .nav-list a {
-    display: inline-block;
+	display: inline-block;
 }
 #sidebar .legend {
-    display: inline-block;
-    height: 20px;
-    width: 20px;
+	display: inline-block;
+	height: 20px;
+	width: 20px;
 }
 .modal-header {
-    background: #eee;
-    color: #000;
-    overflow: hidden;
+	background: #eee;
+	color: #000;
+	overflow: hidden;
 }
 .person .modal-header {
-    color: #fff;
+	color: #fff;
 }
 .modal-header .avatar {
-    margin-right: 10px;
+	margin-right: 10px;
 }
 #filters-dropdown {
 	float: none;
@@ -277,22 +277,22 @@ figure {
 	text-decoration: none;
 }
 [data-filter] {
-    border-bottom: 3px solid #333;
+	border-bottom: 3px solid #333;
 }
 [data-filter] a {
-    color: #fff;
-    display: block;
-    padding: 3px 2px 2px;
+	color: #fff;
+	display: block;
+	padding: 3px 2px 2px;
 }
 [data-filter] a:hover{
-    color: #fff;
+	color: #fff;
 }
 [data-filter="*"]:hover,
 [data-filter="*"].selected {
-    background-color: #222;
+	background-color: #222;
 }
 [data-filter="*"] {
-    border-color: #222;
+	border-color: #222;
 }
 
 .modal .modal-body section header, .modal .modal-body section ul li {
@@ -316,7 +316,7 @@ figure {
 }
 
 .item.current-user {
-    border: 1px dashed #ccc;
+	border: 1px dashed #ccc;
 }
 
 .h3 {
@@ -340,24 +340,24 @@ figure {
 }
 
 #vcards {
-    list-style: none;
-    margin: 0;
-    padding: 0;
+	list-style: none;
+	margin: 0;
+	padding: 0;
 }
 
 .modal {
 	padding: 5px;
 	max-height: 80%;
 	width: 80%; /* respsonsive width */
-    margin-left:-40%; /* width/2) */
+	margin-left:-40%; /* width/2) */
 }
 
 /* Gravity forms */
 body .gform_wrapper {
-    margin: 0;
+	margin: 0;
 }
 body .gform_wrapper input {
-    margin: 0;
+	margin: 0;
 }
 body .gform_wrapper input[type="text"],
 body .gform_wrapper input[type="url"],
@@ -365,83 +365,83 @@ body .gform_wrapper input[type="email"],
 body .gform_wrapper input[type="tel"],
 body .gform_wrapper input[type="number"],
 body .gform_wrapper input[type="password"] {
-    padding: 5px 3px;
+	padding: 5px 3px;
 }
 body .gform_wrapper .gform_heading {
-    margin: 0;
+	margin: 0;
 }
 body .gform_wrapper .top_label .gfield_label {
-    font-size: 12px;
-    font-weight: normal;
-    text-transform: uppercase;
+	font-size: 12px;
+	font-weight: normal;
+	text-transform: uppercase;
 }
 body .gform_wrapper .gfield_description {
-    color: #666;
-    font-size: 11px;
-    padding: 4px 0 0;
+	color: #666;
+	font-size: 11px;
+	padding: 4px 0 0;
 }
 body .gform_wrapper .gfield_contains_required .gfield_label {
-    font-weight: bold;
+	font-weight: bold;
 }
 body .gform_wrapper .gform_footer {
-    margin: 0;
+	margin: 0;
 }
 .modal form {
-    margin: 0;
+	margin: 0;
 }
 
 /* =Person modal
 -------------------------------------------------------------- */
 .person .modal {
-    color: #222;
-    padding: 20px;
+	color: #222;
+	padding: 20px;
 }
 
 
 /* =Isotope
 -------------------------------------------------------------- */
 .isotope-item {
-  z-index: 2;
+	z-index: 2;
 }
 
 .isotope-hidden.isotope-item {
-  pointer-events: none;
-  z-index: 1;
+	pointer-events: none;
+	z-index: 1;
 }
 
 .isotope,
 .isotope .isotope-item {
-  -webkit-transition-duration: 0.8s;
-     -moz-transition-duration: 0.8s;
-      -ms-transition-duration: 0.8s;
-       -o-transition-duration: 0.8s;
-          transition-duration: 0.8s;
+	-webkit-transition-duration: 0.8s;
+	   -moz-transition-duration: 0.8s;
+	    -ms-transition-duration: 0.8s;
+	     -o-transition-duration: 0.8s;
+		      transition-duration: 0.8s;
 }
 
 .isotope {
-  -webkit-transition-property: height, width;
-     -moz-transition-property: height, width;
-      -ms-transition-property: height, width;
-       -o-transition-property: height, width;
-          transition-property: height, width;
+	-webkit-transition-property: height, width;
+	   -moz-transition-property: height, width;
+	    -ms-transition-property: height, width;
+	     -o-transition-property: height, width;
+		      transition-property: height, width;
 }
 
 .isotope .isotope-item {
-  -webkit-transition-property: -webkit-transform, opacity;
-     -moz-transition-property:    -moz-transform, opacity;
-      -ms-transition-property:     -ms-transform, opacity;
-       -o-transition-property:      -o-transform, opacity;
-          transition-property:         transform, opacity;
+	-webkit-transition-property: -webkit-transform, opacity;
+	   -moz-transition-property:    -moz-transform, opacity;
+	    -ms-transition-property:     -ms-transform, opacity;
+	     -o-transition-property:      -o-transform, opacity;
+		      transition-property:         transform, opacity;
 }
 
 .isotope.no-transition,
 .isotope.no-transition .isotope-item,
 .isotope .isotope-item.no-transition {
-  -webkit-transition-duration: 0s;
-     -moz-transition-duration: 0s;
-      -ms-transition-duration: 0s;
-       -o-transition-duration: 0s;
-          transition-duration: 0s;
+	-webkit-transition-duration: 0s;
+	   -moz-transition-duration: 0s;
+	    -ms-transition-duration: 0s;
+	     -o-transition-duration: 0s;
+		      transition-duration: 0s;
 }
 
 /* =Media queries
@@ -471,9 +471,9 @@ body .gform_wrapper .gform_footer {
 		padding: 0 0px 40px;
 	}
 	#menu {
-        margin-left: -45%;
-        width: 90%;
-    }
+		margin-left: -45%;
+		width: 90%;
+	}
 }
 
 /* Assistive text */
@@ -488,17 +488,15 @@ body .gform_wrapper .gform_footer {
 	clip: rect(1px 1px 1px 1px); /* IE7 */
 }
 
-
 .modal .modal-body {
-    max-height: 400px;
+	max-height: 400px;
 }
 
-
 @media print {
-    .modal {
-        border: solid 1px #000;
-        background: white !important;
-    }
+	.modal {
+		border: solid 1px #000;
+		background: white !important;
+	}
 }
 
 /*--------------------------------------------------------------
@@ -533,4 +531,3 @@ Accessibility
 	width: auto;
 	z-index: 100000; /* Above WP toolbar */
 }
-
