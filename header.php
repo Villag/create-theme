@@ -81,9 +81,9 @@ jQuery(document).ready(function($) {
 					<li id="filter">
                     	<ul id="filters" class="option-set" data-option-key="filter">
                     		<?php
-                    		$professions = get_terms( array( 'profession' ), array( 'hide_empty' => false ) );
-							foreach ( $professions as $profession ) { ?>
-					       		<li data-filter=".<?php echo $profession->slug; ?>"><a href="#filter"><?php echo $profession->name; ?></a></li>
+                    		$user_categories = get_terms( array( 'user_category' ), array( 'hide_empty' => false ) );
+							foreach ( $user_categories as $user_category ) { ?>
+					       		<li data-filter=".<?php echo $user_category->slug; ?>"><a href="#filter"><?php echo $user_category->name; ?></a></li>
 					       	<?php } ?>
 					       	<li data-filter="*"><a href="#filter">Reset</a></li>
                         </ul>
