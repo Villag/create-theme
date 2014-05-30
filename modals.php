@@ -93,6 +93,15 @@ global $current_user;
 	<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
 </div>
 
+<div id="email-user" class="modal hide fade">
+	<div class="modal-header">
+		<h3>Email <span id="email-user-first-name"></h3>
+	</div>
+	<div class="modal-body">
+		<?php gravity_form( 'Contact User', false, true, false, false, true ); ?>
+	</div>
+</div>
+
 <?php else: // If user is not logged in ?>
 	
 <div class="modal hide fade" role="dialog" aria-hidden="true" tabindex="-1" id="login" >
