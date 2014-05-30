@@ -1,6 +1,6 @@
 <?php
 if( is_user_logged_in() ):
-global $current_user; 
+global $current_user;
 ?>
 
 <div class="modal hide fade" role="dialog" aria-hidden="true" tabindex="-1" id="edit-profile" aria-labelledby="edit-profile-label" data-width="760">
@@ -15,37 +15,37 @@ global $current_user;
 				var avatar_local = $('#avatar-local');
 				var avatar_social = $('#avatar-social');
 				var avatar_gravatar = $('#avatar-gravatar');
-				
+
 				$('input:radio[name="input_11"]').change( function(){
 					$(this).parent().siblings().removeClass('selected');
-					$(this).parent().addClass('selected');				
+					$(this).parent().addClass('selected');
 				});
 
 				$('input:radio[name="input_11"][checked]').each( function() {
 					$(this).parent().siblings().removeClass('selected');
 					$(this).parent().addClass('selected');
 				});
-					
+
 				if(avatar_local.length > 0) {
 					$('input[value="avatar_upload"]').next().prepend(avatar_local);
 				} else {
 					// Don't hide the local version, even if one doesn't exist
 				}
-						
+
 				if(avatar_social.length > 0) {
 					$('input[value="avatar_social"]').next().prepend(avatar_social);
 				} else {
 					$('input[value="avatar_social"]').parent('li').hide();
 				}
-				
+
 				if(avatar_gravatar.length > 0) {
 					$('input[value="avatar_gravatar"]').next().prepend(avatar_gravatar);
 				} else {
 					$('input[value="avatar_gravatar"]').parent('li').hide();
 				}
-				
+
 			});
-		</script>	
+		</script>
 		<style>
 			.gform_wrapper li.gfield.gf_list_3col ul.gfield_radio li {
 				font-size: 12px;
@@ -83,8 +83,8 @@ global $current_user;
 			.gform_wrapper input[type="radio"] {
 				display: none;
 			}
-		</style>	
-		
+		</style>
+
 		<?php create_choose_avatar( $current_user->ID ); ?>
 
 		<?php get_sidebar( 'profile' ); ?>
@@ -103,61 +103,61 @@ global $current_user;
 </div>
 
 <?php else: // If user is not logged in ?>
-	
+
 <div class="modal hide fade" role="dialog" aria-hidden="true" tabindex="-1" id="login" >
 
 	<div class="modal-header">
-		
+
 		<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-		
+
 		<h3>Login</h3>
-				
+
 	</div>
-	
+
 	<div class="modal-body">
-	
+
 		<div class="row-fluid">
-			
+
 			<div class="span6">
 				<?php do_action('oa_social_login'); ?>
 			</div>
-			
+
 			<div class="span6">
-     			<?php wp_login_form( array( 'redirect' => get_home_url(), 'label_username' => __( 'Email' ) )); ?>    
+     			<?php wp_login_form( array( 'redirect' => get_home_url(), 'label_username' => __( 'Email' ) )); ?>
 			</div>
-			
+
 		</div><!-- .row-fluid -->
-		
+
 	</div>
-		
+
 </div><!-- .modal -->
 
 <div class="modal hide fade" role="dialog" aria-hidden="true" tabindex="-1" id="sign-up" >
 
 	<div class="modal-header">
-		
+
 		<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-		
+
 		<h3>Sign Up</h3>
-				
+
 	</div>
-	
+
 	<div class="modal-body">
-	
+
 		<div class="row-fluid">
-			
+
 			<div class="span6">
 				<?php do_action('oa_social_login'); ?>
 			</div>
-			
+
 			<div class="span6">
-				<?php echo do_shortcode('[gravityform name="Sign Up" title=false description=false]'); ?>			
+				<?php echo do_shortcode('[gravityform name="Sign Up" title=false description=false]'); ?>
 			</div>
-			
+
 		</div><!-- .row-fluid -->
-		
+
 	</div>
-		
+
 </div><!-- .modal -->
 
 <?php endif; ?>
@@ -165,27 +165,27 @@ global $current_user;
 <div class="modal hide fade" id="about" >
 
 	<?php $page_data = get_page_by_path('about'); ?>
-		
+
 	<div class="modal-header">
-		
+
 		<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-		
+
 		<h3><?php echo $page_data->post_title; ?></h3>
-		
+
 	</div>
-	
+
 	<div class="modal-body">
-	
+
 		<div class="row-fluid">
-			
+
 			<div class="span12">
-	
+
 			<?php echo apply_filters('the_content', $page_data->post_content); ?>
-				
+
 			</div>
-			
+
 		</div><!-- .row-fluid -->
-		
+
 	</div>
-	
+
 </div><!-- .modal -->
