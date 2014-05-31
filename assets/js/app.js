@@ -1,5 +1,7 @@
 jQuery(document).ready(function($) {
 
+	$('[data-toggle="tooltip"]').tooltip();
+
 	function create_get_users(e) {
 		var xhr;
 

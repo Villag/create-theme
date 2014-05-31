@@ -58,15 +58,11 @@ jQuery(document).ready(function($) {
 							<ul class="dropdown-menu">
 								<li class="menu-item">			<a href="#edit-profile" role="button" data-toggle="modal" data-modal-id="edit-profile">Edit profile</a></li>
 								<li class="menu-item">			<a href="<?php echo wp_logout_url( get_home_url() ); ?>" title="Logout">Logout</a></li>
-								<li class="divider"></li>
-								<li class="menu-item">			<a href="#about" data-modal-id="about" role="button" data-toggle="modal" >About</a></li>
-								<li class="menu-item">			<a href="https://www.facebook.com/CreateDenton" target="_blank">Like us on Facebook</a></li>
 							</ul>
 
 						<?php } else { ?>
 
 						<ul class="dropdown-menu">
-							<li class="menu-item">			<a href="#about" data-modal-id="about" role="button" data-toggle="modal">About</a></li>
 							<li class="menu-item">			<a href="#login" data-modal-id="about" role="button" data-toggle="modal">Login</a></li>
 							<li class="menu-item">			<a href="#sign-up" data-modal-id="about" role="button" data-toggle="modal">Sign Up</a></li>
 						</ul>
