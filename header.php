@@ -18,7 +18,7 @@
 <?php wp_head(); ?>
 
 <script type="text/javascript">
-$(document).ready(function() {
+jQuery(document).ready(function($) {
 	$("body").iealert({ support: "ie9" ,title: "What? IE!" ,text: "This version of IE is not supported in any real functional way, support for IE9 <strong>MIGHT</strong> be on the way. If you are using IE, than maybe this site is not for you! I'm kidding....but no really, IE sucks and we don't support it. Smiley Face." });
 });
 </script>
@@ -58,17 +58,13 @@ $(document).ready(function() {
 							<ul class="dropdown-menu">
 								<li class="menu-item">			<a href="#edit-profile" role="button" data-toggle="modal" data-modal-id="edit-profile">Edit profile</a></li>
 								<li class="menu-item">			<a href="<?php echo wp_logout_url( get_home_url() ); ?>" title="Logout">Logout</a></li>
-								<li class="divider"></li>
-								<li class="menu-item">			<a href="#about" data-modal-id="about" role="button" data-toggle="modal" >About</a></li>
-								<li class="menu-item">			<a href="https://www.facebook.com/CreateDenton" target="_blank">Like us on Facebook</a></li>
 							</ul>
 
 						<?php } else { ?>
 
 						<ul class="dropdown-menu">
-							<li class="menu-item">			<a href="#about" data-modal-id="about" role="button" data-toggle="modal" >About</a></li>
-							<li class="menu-item">			<a href="#login" data-modal-id="about" role="button" data-toggle="modal" >Login</a></li>
-							<li class="menu-item">			<a href="#sign-up" data-modal-id="about" role="button" data-toggle="modal" >Sign Up</a></li>
+							<li class="menu-item">			<a href="#login" data-modal-id="about" role="button" data-toggle="modal">Login</a></li>
+							<li class="menu-item">			<a href="#sign-up" data-modal-id="about" role="button" data-toggle="modal">Sign Up</a></li>
 						</ul>
 
 						<?php } ?>
@@ -81,9 +77,9 @@ $(document).ready(function() {
 					<li id="filter">
                     	<ul id="filters" class="option-set" data-option-key="filter">
                     		<?php
-                    		$professions = get_terms( array( 'profession' ), array( 'hide_empty' => false ) );
-							foreach ( $professions as $profession ) { ?>
-					       		<li data-filter=".<?php echo $profession->slug; ?>"><a href="#filter"><?php echo $profession->name; ?></a></li>
+                    		$user_categories = get_terms( array( 'user_category' ), array( 'hide_empty' => false ) );
+							foreach ( $user_categories as $user_category ) { ?>
+					       		<li data-filter=".<?php echo $user_category->slug; ?>"><a href="#filter"><?php echo $user_category->name; ?></a></li>
 					       	<?php } ?>
 					       	<li data-filter="*"><a href="#filter">Reset</a></li>
                         </ul>

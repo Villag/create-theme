@@ -1,4 +1,4 @@
-<div id="user-{{ID}}" class="modal hide fade person card-back {{type}}" role="dialog" aria-labelledby="modal-person-label" aria-hidden="true" data-type="{{type}}">
+<div id="user-{{ID}}" class="modal hide fade person card-back {{type}}" aria-labelledby="modal-person-label" aria-hidden="true" data-type="{{type}}" tabindex="-1">
 
 	<figure id="vcard-lastfirst-{{ID}}" itemscope="itemscope" itemtype="http://www.data-vocabulary.org/Person/">
 		<figcaption>
@@ -33,7 +33,7 @@
 								<li class="tel"><abbr class="value" itemprop="tel" title="+1{{phone}}">{{phone}}</abbr></li>
 							{{/if}}
 							{{#if email}}
-								<li class="email"><a href="#" data-reveal-id="contact-{{ID}}" data-animation="fade" data-animationSpeed="12000"><i class="icon-envelope"></i> Email</a></li>
+								<li class="email"><a href="#email-user" data-user-id-to="{{ID}}" data-modal-id="email-user" data-toggle="modal"><i class="icon-envelope"></i> Email</a></li>
 							{{/if}}
 						<?php } else { ?>
 							{{#if phone}}
@@ -68,13 +68,3 @@
 		</figcaption><!-- .figcaption -->
 	</figure>
 </div><!-- .vcard -->
-
-<div id="contact-{{ID}}" class="modal hide fade {{type}}">
-	<div class="modal-header">
-		<img src="{{{avatar}}}" height="165" width="165" alt="{{first_name}} {{last_name}}">
-		<h3>Email {{first_name}}</h3>
-	</div>
-	<div class="modal-body">
-		<?php //gravity_form( 'Contact User', false, true, false, array('to_email' => antispambot( $user_object['email'] ) ), true ); ?>
-	</div>
-</div>

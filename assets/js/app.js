@@ -1,12 +1,14 @@
 jQuery(document).ready(function($) {
 
+	$('[data-toggle="tooltip"]').tooltip();
+
 	function create_get_users(e) {
 		var xhr;
 
 		if (xhr) {
 			xhr.abort();
 		}
-		
+
 		var data = {
 			action: 'create_get_users',
 		};
@@ -18,26 +20,25 @@ jQuery(document).ready(function($) {
 			dataType: 'json'
 		})
 			.done(function (response) {
-				
+
 				if (response) {
 					try {
-						console.log(response);
 						var data = response;
 						var source = $("#user").html();
 						var template = Handlebars.compile(source);
-		
+
 						$('body').append(template(data));
 						var $container = $('#the-creatives');
 						// init
 						$container.isotope({
-						  itemSelector : '.item'
+							itemSelector : '.item'
 						});
-		
+
 						var $optionSets = $('#filter .option-set'), $optionLinks = $optionSets.find('a');
-					
+
 						$optionLinks.click(function(event) {
 							var $this = $(this);
-					
+
 							// don't proceed if already selected
 							if ($this.hasClass('selected')) {
 								return false;
@@ -45,7 +46,7 @@ jQuery(document).ready(function($) {
 							var $optionSet = $this.parents('.option-set');
 							$optionSet.find('.selected').removeClass('selected');
 							$this.parent().addClass('selected');
-					
+
 							var filters = $(this).parent().data('filter');
 							$container.isotope({
 								filter : filters,
@@ -57,23 +58,38 @@ jQuery(document).ready(function($) {
 							});
 							event.preventDefault();
 						});
-		
+
 						// When the modal hides, remove the hash from the URL and unblur
 						$('.modal').on('hidden', function () {
 							window.location.hash = '';
 							history.pushState('', document.title, window.location.pathname);
 						});
-					
+
 						// When an anchor is clicked, add its ID as a hash to the URL
 						$('a').click(function() {
 							var hash = $(this).data('modal-id');
-							if( hash != null ) {
+							if( hash !== null ) {
 								window.location.hash = hash;
 							}
 						});
-					
+
 						// Display a modal if the ID matches the hash in the URL
-						$(window.location.hash).modal('show');	
+						$(window.location.hash).modal('show');
+
+						$('body').on('click', 'a[data-modal-id="email-user"]', function(){
+							$('.modal').modal('hide'); // Hide any open modals
+							var user_id_to		= $( this ).data( 'user-id-to' );
+							var user_id_from	= create_theme.current_user_id;
+
+							$('#contact-form input[name="user_id_to"]').val( user_id_to );
+							$('#contact-form input[name="user_id_from"]').val( user_id_from );
+						});
+
+						$('#contact-form').submit(function( event ) {
+							create_email_user( this, event, 'submit-contact-form' );
+							event.preventDefault();
+						});
+
 					} catch (err) {
 
 					}
@@ -81,5 +97,41 @@ jQuery(document).ready(function($) {
 			});
 
 	} create_get_users();
+
+	function create_email_user( data, event, triggerType ) {
+
+		var xhr;
+
+		if (xhr) {
+			xhr.abort();
+		}
+
+		xhr = $.ajax({
+			type: 'POST',
+			url: create_theme.ajaxurl,
+			data: $(data).serialize(),
+			dataType: 'json'
+		})
+			.always(function(response) {
+
+			})
+			.done(function (response) {
+
+				if (response) {
+					try {
+						resetForm($(data));
+						$('#email-user .alert').show().text(response.message);
+					} catch (err) {
+
+					}
+				}
+			});
+
+	}
+
+	function resetForm($form) {
+			$form.find('input:text, input:password, input:file, select, textarea').val('');
+			$form.find('input:radio, input:checkbox').removeAttr('checked').removeAttr('selected');
+		}
 
 });
