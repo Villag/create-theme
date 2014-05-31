@@ -114,6 +114,11 @@ strong {
 	text-transform: uppercase;
 }
 
+.navbar.navbar-fixed-bottom li a {
+	line-height: 32px;
+	padding: 2px 10px;
+}
+
 #site-navigation {
 	margin: 0;
 	padding: 0;
