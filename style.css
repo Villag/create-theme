@@ -81,6 +81,7 @@ body {
 }
 a {
 	color: #fff;
+	outline: none;
 }
 
 strong {
@@ -175,12 +176,12 @@ figure {
 	border-top-right-radius: 20px;
 	color: #fff;
 	float: left;
-	height: 165px;
-	margin: 0 6px 6px 0;
+	height: 150px;
+	margin: 5px;
 	overflow: hidden;
 	padding: 4px;
 	position: relative;
-	width: 330px;
+	width: 300px;
 }
 .item .card {
 	overflow: hidden;
@@ -472,6 +473,80 @@ body .gform_wrapper .gform_footer {
 		margin-left: -45%;
 		width: 90%;
 	}
+}
+
+/*           600px
+ * ──────────<----------
+ *
+ * Mobile-specific (all smaller screens)
+ * -------------------------------------------------- */
+@media only screen and (max-width: 600px) {
+
+}
+
+
+/*           767px
+ * ──────────<----------
+ * Smaller tablets and phones
+ * -------------------------------------------------- */
+@media only screen and (max-width: 767px) {
+
+}
+
+/*            768px      941px
+ * ---------->──────────<----------
+ * Mostly for tablets
+ * -------------------------------------------------- */
+@media only screen and (min-width: 768px) and (max-width: 941px) {
+
+}
+
+/*            924px      1023px
+ * ---------->──────────<----------
+ * Mostly for tablets
+ * -------------------------------------------------- */
+@media only screen and (min-width: 942px) and (max-width: 1023px) {
+
+}
+
+/*            1024px     1170px
+ * ---------->──────────<----------
+ * Large screens (but not the largest)
+ * -------------------------------------------------- */
+@media only screen and (min-width: 1024px) and (max-width: 1170px) {
+
+}
+
+/*            1170px
+ * ---------->──────────
+ * The largest screens
+ * -------------------------------------------------- */
+@media only screen and (min-width: 1171px) {
+
+}
+
+/*            1170px
+ * ──────────>-----------
+ * For most screens
+ * -------------------------------------------------- */
+@media only screen (max-width: 1170px) {
+
+}
+
+/*            1180px
+ * ────────────>------------
+ * For most screens
+ * -------------------------------------------------- */
+@media only screen (max-width: 1180px) {
+
+}
+/*            400px
+ * ──────────<----------
+ *
+ * Mobile-specific (all smaller screens)
+ * -------------------------------------------------- */
+@media (max-width: 400px) {
+
 }
 
 /* Assistive text */

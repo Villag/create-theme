@@ -1,6 +1,6 @@
 <li class="item vcard person {{type}}">
 	<a class="card" href="#user-{{ID}}" data-modal-id="user-{{ID}}" role="button" data-toggle="modal">
-		<img src="{{{avatar}}}" height="165" width="165" alt="{{first_name}} {{last_name}}">
+		<img src="{{{avatar}}}" height="150" width="150" alt="{{first_name}} {{last_name}}">
 
 		<header class="n brief" title="Name">
 			<span class="fn" itemprop="name">
