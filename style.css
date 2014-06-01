@@ -350,13 +350,6 @@ figure {
 	padding: 0;
 }
 
-.modal {
-	padding: 5px;
-	max-height: 80%;
-	width: 80%; /* respsonsive width */
-	margin-left:-40%; /* width/2) */
-}
-
 /* Gravity forms */
 body .gform_wrapper {
 	margin: 0;
@@ -491,10 +484,6 @@ body .gform_wrapper .gform_footer {
  ----------------------------------------------- */
 .ie .skip-link, .ie .screen-reader-text, .ie .assistive-text {
 	clip: rect(1px 1px 1px 1px); /* IE7 */
-}
-
-.modal .modal-body {
-	max-height: 400px;
 }
 
 @media print {
