@@ -23,17 +23,18 @@ get_header(); ?>
 
 			<?php while ( have_posts() ) : the_post(); ?>
 
-
-
 				<div class="row-fluid">
 
 					<script id="user" type="text/x-handlebars-template">
 						<ul id="the-creatives">
-						    {{#users}}
+
+							<?php get_template_part( 'partials/special', 'about' ); ?>
+
+							{{#users}}
 
 							<?php get_template_part( 'card-front' ); ?>
 
-						    {{/users}}
+						 	{{/users}}
 						</ul>
 
 						{{#users}}

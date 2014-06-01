@@ -81,6 +81,10 @@ body {
 }
 a {
 	color: #fff;
+}
+
+a:focus {
+	color: #fff;
 	outline: none;
 }
 
@@ -305,7 +309,7 @@ figure {
 	color: #333;
 }
 
-.modal .modal-body section p {
+.modal.person .modal-body section p {
 	color: #333;
 	border-left: solid 2px #333;
 	padding-left: 15px;
@@ -566,6 +570,13 @@ body .gform_wrapper .gform_footer {
 		border: solid 1px #000;
 		background: white !important;
 	}
+}
+
+#uvTab {
+	bottom: 0;
+	position: absolute !important;
+	top: inherit !important;
+	z-index: 900 !important;
 }
 
 /*--------------------------------------------------------------
