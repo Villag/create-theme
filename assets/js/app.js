@@ -90,6 +90,11 @@ jQuery(document).ready(function($) {
 							event.preventDefault();
 						});
 
+						$.fn.modal.defaults.maxHeight = function(){
+							// subtract the height of the modal header and footer
+							return $(window).height() - 165;
+						}
+
 					} catch (err) {
 
 					}
