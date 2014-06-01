@@ -13,7 +13,21 @@
 	</div><!-- #main .wrapper -->
 </div><!-- #page -->
 
-<?php get_template_part( 'modals' ); // Load modals.php ?>
+<?php if( is_user_logged_in() ): ?>
+
+	<?php get_template_part( 'partials/modal', 'edit-profile' ); ?>
+
+	<?php get_template_part( 'partials/modal', 'email-user' ); ?>
+
+<?php else: // If user is not logged in ?>
+
+	<?php get_template_part( 'partials/modal', 'sign-up' ); ?>
+
+	<?php get_template_part( 'partials/modal', 'login' ); ?>
+
+<?php endif; ?>
+
+<?php get_template_part( 'partials/modal', 'about' ); ?>
 
 <div class="navbar navbar-inverse navbar-fixed-bottom">
 	<div class="navbar-inner">
@@ -27,7 +41,7 @@
 </div>
 
 <?php wp_footer(); ?>
-<?php //create_first_timer(); ?>
+
 <script type="text/javascript">
 var uvOptions = {};
 (function() {
