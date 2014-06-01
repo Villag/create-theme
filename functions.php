@@ -133,3 +133,8 @@ function create_scripts() {
 	wp_localize_script( 'app', 'create_theme', array( 'ajaxurl' => admin_url( 'admin-ajax.php' ), 'current_user_id' => $current_user->ID ) );
 }
 add_action( 'wp_enqueue_scripts', 'create_scripts' );
+
+/**
+ * Custom functions that act independently of the theme templates.
+ */
+require get_template_directory() . '/inc/extras.php';
