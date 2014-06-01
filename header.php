@@ -35,13 +35,7 @@ jQuery(document).ready(function($) {
 			<div class="skip-link assistive-text"><a href="#content" title="<?php esc_attr_e( 'Skip to content', 'create' ); ?>"><?php _e( 'Skip to content', 'create' ); ?></a></div>
 			<div class="menu-primary-container">
 
-				<a class="btn btn-navbar" data-toggle="collapse" data-target="#menu-secondary">
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-				</a>
-
-				<ul id="menu-secondary" class="nav nav-collapse collapse pull-right">
+				<ul id="menu-secondary" class="nav pull-right">
 
 					<?php
 					if( is_user_logged_in() ) {
@@ -53,7 +47,7 @@ jQuery(document).ready(function($) {
 
 							<a href="#" class="menu-item dropdown-toggle" data-toggle="dropdown">
 								<?php echo get_avatar( $current_user->ID, 25 ); ?>
-								<?php echo $current_user->user_login; ?> <b class="caret"></b></a>
+								<span class="username"><?php echo $current_user->user_login; ?></span> <b class="caret"></b></a>
 
 							<ul class="dropdown-menu">
 								<li class="menu-item">			<a href="#edit-profile" role="button" data-toggle="modal" data-modal-id="edit-profile">Edit profile</a></li>

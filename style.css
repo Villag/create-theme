@@ -119,11 +119,6 @@ strong {
 	text-transform: uppercase;
 }
 
-.navbar.navbar-fixed-bottom li a {
-	line-height: 32px;
-	padding: 2px 10px;
-}
-
 #site-navigation {
 	margin: 0;
 	padding: 0;
@@ -550,7 +545,26 @@ body .gform_wrapper .gform_footer {
  * Mobile-specific (all smaller screens)
  * -------------------------------------------------- */
 @media (max-width: 400px) {
-
+	.navbar .brand {
+		font-size: 16px;
+	}
+	#menu-secondary {
+		float: none;
+		padding: 7px 0 0 0;
+		text-align: right;
+	}
+	#menu-secondary > li {
+		float: none;
+	}
+	#menu-secondary > li > a {
+		padding: 0;
+	}
+	#menu-secondary >li>a:focus, #menu-secondary li>a:hover {
+		background-color: transparent;
+	}
+	#menu-secondary .username {
+		display: none;
+	}
 }
 
 /* Assistive text */
