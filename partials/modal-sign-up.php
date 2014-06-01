@@ -17,7 +17,7 @@
 			</div>
 
 			<div class="span6">
-				<?php echo do_shortcode('[gravityform name="Sign Up" title=false description=false]'); ?>
+				<?php echo do_shortcode('[gravityform name="Sign Up" title=false description=false ajax=true]'); ?>
 			</div>
 
 		</div><!-- .row-fluid -->
