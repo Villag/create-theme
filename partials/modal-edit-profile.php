@@ -2,7 +2,7 @@
 global $current_user;
 $blog_id = get_current_blog_id();
 $blog_details = get_blog_details( $blog_id );
-$user_meta = get_user_meta( $current_user->ID, 'user_meta_'. str_replace( '/', '', $blog_details->path ), true ); ?>
+$user_meta = get_user_meta( $current_user->ID, 'user_meta_'. str_replace( '/', '', $blog_details->path ), true );
 ?>
 <div class="modal hide fade" role="dialog" aria-hidden="true" tabindex="-1" id="edit-profile" aria-labelledby="edit-profile-label" data-width="760">
 	<div class="modal-header">
