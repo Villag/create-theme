@@ -31,7 +31,18 @@ jQuery(document).ready(function($) {
 	<nav id="site-navigation" class="navbar navbar-inverse row-fluid" role="navigation">
 		<div class="navbar-inner">
 			<h1 class="brand"><a href="<?php echo esc_url( network_home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">Create <strong>Denton</strong></a>
-				<a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'description' ) ); ?>" class="site-title" rel="home"><?php echo esc_html( get_bloginfo( 'description' ) ); ?></a></h1>
+			<div class="btn-group">
+				<a class="dropdown-toggle" data-toggle="dropdown" href="#">
+					<a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'description' ) ); ?>" class="site-title" rel="home"><?php echo esc_html( get_bloginfo( 'description' ) ); ?></a>
+					<span class="caret"></span>
+				</a>
+				<ul class="dropdown-menu">
+					<li><a href="<?php echo esc_url( network_home_url( '/digital' ) ); ?>">digital</a></li>
+					<!--<li><a href="<?php echo esc_url( network_home_url( '/market' ) ); ?>">market</a></li>-->
+					<!--<li><a href="<?php echo esc_url( network_home_url( '/music' ) ); ?>">music</a></li>-->
+				</ul>
+			</div>
+				</h1>
 			<div class="skip-link assistive-text"><a href="#content" title="<?php esc_attr_e( 'Skip to content', 'create' ); ?>"><?php _e( 'Skip to content', 'create' ); ?></a></div>
 			<div class="menu-primary-container">
 
@@ -51,6 +62,7 @@ jQuery(document).ready(function($) {
 
 							<ul class="dropdown-menu">
 								<li class="menu-item">			<a href="#edit-profile" role="button" data-toggle="modal" data-modal-id="edit-profile">Edit profile</a></li>
+								<li class="menu-item">			<a href="#edit-avatar" role="button" data-toggle="modal" data-modal-id="edit-avatar">Edit avatar</a></li>
 								<li class="menu-item">			<a href="<?php echo wp_logout_url( get_home_url() ); ?>" title="Logout">Logout</a></li>
 							</ul>
 

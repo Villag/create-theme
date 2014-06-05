@@ -100,6 +100,14 @@ function roots_rel_canonical() {
 }
 add_action( 'init', 'create_head_cleanup' );
 
+function show_users_own_attachments( $query ) {
+	$id = get_current_user_id();
+	if( !current_user_can('manage_options') )
+	$query['author'] = $id;
+	return $query;
+}
+add_filter( 'ajax_query_attachments_args', 'show_users_own_attachments', 1, 1 );
+
 /**
  * Enqueue scripts and styles.
  */

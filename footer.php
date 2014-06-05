@@ -16,6 +16,7 @@
 <?php if( is_user_logged_in() ): ?>
 
 	<?php get_template_part( 'partials/modal', 'edit-profile' ); ?>
+	<?php get_template_part( 'partials/modal', 'edit-avatar' ); ?>
 
 	<?php get_template_part( 'partials/modal', 'email-user' ); ?>
 

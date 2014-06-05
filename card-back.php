@@ -1,4 +1,4 @@
-<div id="user-{{ID}}" class="modal hide fade person card-back {{type}}" aria-labelledby="modal-person-label" aria-hidden="true" data-type="{{type}}" tabindex="-1">
+<div id="user-{{ID}}" class="modal hide fade person card-back {{types}}" aria-labelledby="modal-person-label" aria-hidden="true" data-type="{{type}}" tabindex="-1">
 
 	<figure id="vcard-lastfirst-{{ID}}" itemscope="itemscope" itemtype="http://www.data-vocabulary.org/Person/">
 		<figcaption>
@@ -10,7 +10,7 @@
 						<span class="given-name">{{first_name}}</span>
 						<span class="family-name">{{last_name}}</span>
 					</h3>
-					<div class="primary-job">{{primary_job}}</div>
+					<div class="primary-job">{{primary_jobs}}</div>
 				</header><!-- .n -->
 			</div><!-- .modal-header -->
 
@@ -45,11 +45,11 @@
 				</section>
 
 				<section title="Biography">
-					{{#if description}}
+					{{#if bio}}
 					<header>
 						<h4>Biography</h4>
 					</header>
-					<p>{{description}}</p>
+					<p>{{{bio}}}</p>
 					{{/if}}
 
 					{{#if skills}}

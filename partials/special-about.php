@@ -24,7 +24,7 @@
 
 			<?php $page_data = get_page_by_title( 'about' ); ?>
 
-			<?php echo apply_filters('the_content', $page_data->post_content); ?>
+			<?php if( $page_data ) { echo apply_filters('the_content', $page_data->post_content); } ?>
 
 		</section>
 	</div><!-- modal-body -->
