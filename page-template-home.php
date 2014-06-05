@@ -15,7 +15,7 @@ get_header(); ?>
 
 			<?php global $current_user; if ( ! create_is_valid_user( $current_user->ID ) ) { ?>
 			<div class="row-fluid">
-				<div class="alert alert-warning span12">Your profile is not public because it's missing <strong><?php echo create_user_errors( $current_user->ID  ); ?></strong>. Please <a href="#" data-reveal-id="edit-profile" data-animation="fade" data-animationSpeed="12000">edit your profile</a>.</div>
+				<div class="alert alert-warning span12">Your profile is not public because it's missing <strong><?php echo create_user_errors( $current_user->ID  ); ?></strong>. Please <a href="#edit-profile" role="button" data-toggle="modal" data-modal-id="edit-profile">edit your profile</a>.</div>
 			</div>
 			<?php } ?>
 
