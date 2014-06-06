@@ -30,19 +30,17 @@ jQuery(document).ready(function($) {
 
 	<nav id="site-navigation" class="navbar navbar-inverse row-fluid" role="navigation">
 		<div class="navbar-inner">
-			<h1 class="brand"><a href="<?php echo esc_url( network_home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">Create <strong>Denton</strong></a>
-			<div class="btn-group">
-				<a class="dropdown-toggle" data-toggle="dropdown" href="#">
-					<a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'description' ) ); ?>" class="site-title" rel="home"><?php echo esc_html( get_bloginfo( 'description' ) ); ?></a>
-					<span class="caret"></span>
-				</a>
-				<ul class="dropdown-menu">
-					<li><a href="<?php echo esc_url( network_home_url( '/digital' ) ); ?>">digital</a></li>
-					<!--<li><a href="<?php echo esc_url( network_home_url( '/market' ) ); ?>">market</a></li>-->
-					<!--<li><a href="<?php echo esc_url( network_home_url( '/music' ) ); ?>">music</a></li>-->
-				</ul>
-			</div>
-				</h1>
+			<h1 class="brand">
+				<a href="<?php echo esc_url( network_home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">Create <strong>Denton</strong></a>
+				<span class="btn-group">
+					<a class="btn btn-link dropdown-toggle" data-toggle="dropdown" href="#"><?php echo esc_html( get_bloginfo( 'description' ) ); ?> <span class="caret"></span></a>
+					<ul class="dropdown-menu">
+						<li><a href="<?php echo esc_url( network_home_url( '/digital' ) ); ?>">digital</a></li>
+						<li><a href="#">market (soon)</a></li>
+						<li><a href="#">music (soon)</a></li>
+					</ul>
+				</span>
+			</h1>
 			<div class="skip-link assistive-text"><a href="#content" title="<?php esc_attr_e( 'Skip to content', 'create' ); ?>"><?php _e( 'Skip to content', 'create' ); ?></a></div>
 			<div class="menu-primary-container">
 

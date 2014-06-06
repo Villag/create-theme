@@ -25,7 +25,6 @@ Use it to make something cool, have fun, and share what you've learned with othe
 	font-weight: normal;
 	font-style: normal;
 }
-
 @font-face {
 	font-family: 'ArvoItalic';
 	src: url('assets/fonts/arvo/Arvo-Italic-webfont.eot');
@@ -36,7 +35,6 @@ Use it to make something cool, have fun, and share what you've learned with othe
 	font-weight: normal;
 	font-style: normal;
 }
-
 @font-face {
 	font-family: 'ArvoBold';
 	src: url('assets/fonts/arvo/Arvo-Bold-webfont.eot');
@@ -47,7 +45,6 @@ Use it to make something cool, have fun, and share what you've learned with othe
 	font-weight: normal;
 	font-style: normal;
 }
-
 @font-face {
 	font-family: 'ArvoBoldItalic';
 	src: url('assets/fonts/arvo/Arvo-BoldItalic-webfont.eot');
@@ -58,17 +55,25 @@ Use it to make something cool, have fun, and share what you've learned with othe
 	font-weight: normal;
 	font-style: normal;
 }
-
 @font-face {
-	font-family: 'aaargh';
-	src: url('assets/fonts/aaargh/Aaargh-webfont.eot');
-	src: url('assets/fonts/aaargh/Aaargh-webfont.eot?#iefix') format('embedded-opentype'),
-		 url('assets/fonts/aaargh/Aaargh-webfont.woff') format('woff'),
-		 url('assets/fonts/aaargh/Aaargh-webfont.ttf') format('truetype'),
-		 url('assets/fonts/aaargh/Aaargh-webfont.svg#aaarghnormal') format('svg');
+	font-family: 'opensans';
+	src: url('assets/fonts/opensans/regular/OpenSans-Regular-webfont.eot');
+	src: url('assets/fonts/opensans/regular/OpenSans-Regular-webfont.eot?#iefix') format('embedded-opentype'),
+		url('assets/fonts/opensans/regular/OpenSans-Regular-webfont.woff') format('woff'),
+		url('assets/fonts/opensans/regular/OpenSans-Regular-webfont.ttf') format('truetype'),
+		url('assets/fonts/opensans/regular/OpenSans-Regular-webfont.svg#open_sanslight') format('svg');
 	font-weight: normal;
 	font-style: normal;
-
+}
+@font-face {
+	font-family: 'opensans';
+	src: url('assets/fonts/opensans/light/OpenSans-Light-webfont.eot');
+	src: url('assets/fonts/opensans/light/OpenSans-Light-webfont.eot?#iefix') format('embedded-opentype'),
+		url('assets/fonts/opensans/light/OpenSans-Light-webfont.woff') format('woff'),
+		url('assets/fonts/opensans/light/OpenSans-Light-webfont.ttf') format('truetype'),
+		url('assets/fonts/opensans/light/OpenSans-Light-webfont.svg#open_sanslight') format('svg');
+	font-weight: 300;
+	font-style: normal;
 }
 
 html.js {
@@ -103,9 +108,28 @@ strong {
 .navbar .brand strong {
 	font-weight: 400;
 }
+.navbar .brand a:hover {
+	color: #fff;
+}
+
+.navbar .brand .btn {
+	color: #fff;
+	font-family: "opensans";
+	font-size: 21px;
+	line-height: 21px;
+	padding: 0;
+	text-shadow: none;
+}
+.navbar .brand .btn:active,
+.navbar .brand .btn:focus {
+	background: none;
+}
+.navbar .brand .caret {
+	border-top: 4px solid #fff;
+}
 
 .navbar .site-title {
-	font-family: "aaargh";
+	font-family: "opensans";
 	text-transform: none;
 }
 
