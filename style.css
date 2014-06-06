@@ -16,7 +16,7 @@ Use it to make something cool, have fun, and share what you've learned with othe
 */
 
 @font-face {
-	font-family: 'ArvoRegular';
+	font-family: 'Arvo';
 	src: url('assets/fonts/arvo/Arvo-Regular-webfont.eot');
 	src: url('assets/fonts/arvo/Arvo-Regular-webfont.eot?#iefix') format('embedded-opentype'),
 		 url('assets/fonts/arvo/Arvo-Regular-webfont.woff') format('woff'),
@@ -26,37 +26,17 @@ Use it to make something cool, have fun, and share what you've learned with othe
 	font-style: normal;
 }
 @font-face {
-	font-family: 'ArvoItalic';
-	src: url('assets/fonts/arvo/Arvo-Italic-webfont.eot');
-	src: url('assets/fonts/arvo/Arvo-Italic-webfont.eot?#iefix') format('embedded-opentype'),
-		 url('assets/fonts/arvo/Arvo-Italic-webfont.woff') format('woff'),
-		 url('assets/fonts/arvo/Arvo-Italic-webfont.ttf') format('truetype'),
-		 url('assets/fonts/arvo/Arvo-Italic-webfont.svg#ArvoItalic') format('svg');
-	font-weight: normal;
-	font-style: normal;
-}
-@font-face {
-	font-family: 'ArvoBold';
+	font-family: 'Arvo';
 	src: url('assets/fonts/arvo/Arvo-Bold-webfont.eot');
 	src: url('assets/fonts/arvo/Arvo-Bold-webfont.eot?#iefix') format('embedded-opentype'),
 		 url('assets/fonts/arvo/Arvo-Bold-webfont.woff') format('woff'),
 		 url('assets/fonts/arvo/Arvo-Bold-webfont.ttf') format('truetype'),
 		 url('assets/fonts/arvo/Arvo-Bold-webfont.svg#ArvoBold') format('svg');
-	font-weight: normal;
+	font-weight: bold;
 	font-style: normal;
 }
 @font-face {
-	font-family: 'ArvoBoldItalic';
-	src: url('assets/fonts/arvo/Arvo-BoldItalic-webfont.eot');
-	src: url('assets/fonts/arvo/Arvo-BoldItalic-webfont.eot?#iefix') format('embedded-opentype'),
-		 url('assets/fonts/arvo/Arvo-BoldItalic-webfont.woff') format('woff'),
-		 url('assets/fonts/arvo/Arvo-BoldItalic-webfont.ttf') format('truetype'),
-		 url('assets/fonts/arvo/Arvo-BoldItalic-webfont.svg#ArvoBoldItalic') format('svg');
-	font-weight: normal;
-	font-style: normal;
-}
-@font-face {
-	font-family: 'opensans';
+	font-family: 'OpenSans';
 	src: url('assets/fonts/opensans/regular/OpenSans-Regular-webfont.eot');
 	src: url('assets/fonts/opensans/regular/OpenSans-Regular-webfont.eot?#iefix') format('embedded-opentype'),
 		url('assets/fonts/opensans/regular/OpenSans-Regular-webfont.woff') format('woff'),
@@ -66,7 +46,7 @@ Use it to make something cool, have fun, and share what you've learned with othe
 	font-style: normal;
 }
 @font-face {
-	font-family: 'opensans';
+	font-family: 'OpsenSans';
 	src: url('assets/fonts/opensans/light/OpenSans-Light-webfont.eot');
 	src: url('assets/fonts/opensans/light/OpenSans-Light-webfont.eot?#iefix') format('embedded-opentype'),
 		url('assets/fonts/opensans/light/OpenSans-Light-webfont.woff') format('woff'),
@@ -82,7 +62,8 @@ html.js {
 
 body {
 	background: #333;
-	font-family: "ArvoRegular";
+	font-family: "OpenSans";
+	font-weight: normal;
 }
 a {
 	color: #fff;
@@ -93,13 +74,9 @@ a:focus {
 	outline: none;
 }
 
-strong {
-	font-family: "ArvoBold";
-}
-
 .navbar .brand {
 	letter-spacing: 0;
-	font-weight: 300;
+	font-family: "Arvo";
 	margin: 0 20px 0 0;
 	padding: 0;
 	text-transform: uppercase;
@@ -114,7 +91,6 @@ strong {
 
 .navbar .brand .btn {
 	color: #fff;
-	font-family: "opensans";
 	font-size: 21px;
 	line-height: 21px;
 	padding: 0;
@@ -129,7 +105,7 @@ strong {
 }
 
 .navbar .site-title {
-	font-family: "opensans";
+	font-family: "OpenSans";
 	text-transform: none;
 }
 
@@ -194,10 +170,11 @@ figure {
 }
 .item {
 	background: #eee;
-	border: 1px solid #eee;
+	border: 1px solid #222;
 	border-radius: 4px;
 	border-top-right-radius: 20px;
 	color: #fff;
+	display: block;
 	float: left;
 	height: 150px;
 	margin: 5px;
@@ -205,6 +182,9 @@ figure {
 	padding: 4px;
 	position: relative;
 	width: 300px;
+}
+#the-creatives .item:hover {
+	background: #333;
 }
 .item .card {
 	overflow: hidden;
@@ -215,11 +195,12 @@ figure {
 }
 .item .card .brief {
 	display: block;
-	height: 100%;
 	float: right;
+	font-family: "Arvo";
+	height: 100%;
 	text-indent: 10px;
 	position: relative;
-	width: 49%;
+	width: 48%;
 }
 .item .card .avatar {
 	border-radius: 4px 0px 0px 4px;
@@ -286,9 +267,13 @@ figure {
 }
 .person .modal-header {
 	color: #fff;
+	font-family: "Arvo";
 }
 .modal-header .avatar {
 	margin-right: 10px;
+}
+.person h4 {
+	font-family: "Arvo";
 }
 #filters-dropdown {
 	float: none;
