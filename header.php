@@ -32,8 +32,8 @@ jQuery(document).ready(function($) {
 		<div class="navbar-inner">
 			<h1 class="brand">
 				<a href="<?php echo esc_url( network_home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">Create <strong>Denton</strong></a>
-				<span class="btn-group">
-					<a class="btn btn-link dropdown-toggle" data-toggle="dropdown" href="#"><?php echo esc_html( get_bloginfo( 'description' ) ); ?> <span class="caret"></span></a>
+				<span class="site-name btn-group">
+					<a class="btn btn-link dropdown-toggle" data-toggle="dropdown" href="#"><?php echo esc_html( get_bloginfo( 'description' ) ); ?>  <span class="custom-caret">&#9660;</span></a>
 					<ul class="dropdown-menu">
 						<li><a href="<?php echo esc_url( network_home_url( '/digital' ) ); ?>">digital</a></li>
 						<li><a href="#">market (soon)</a></li>

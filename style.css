@@ -80,6 +80,7 @@ a:focus {
 	margin: 0 20px 0 0;
 	padding: 0;
 	text-transform: uppercase;
+	white-space: nowrap;
 	word-spacing: -1px;
 }
 .navbar .brand strong {
@@ -89,10 +90,17 @@ a:focus {
 	color: #fff;
 }
 
-.navbar .brand .btn {
+.navbar .brand .site-name {
+	display: inline;
+	font-family: "OpenSans";
+	white-space: nowrap;
+}
+
+.navbar .brand .site-name .btn {
 	color: #fff;
+	display: inline;
 	font-size: 21px;
-	line-height: 21px;
+	line-height: 20px;
 	padding: 0;
 	text-shadow: none;
 }
@@ -100,10 +108,11 @@ a:focus {
 .navbar .brand .btn:focus {
 	background: none;
 }
-.navbar .brand .caret {
-	border-top: 4px solid #fff;
+.navbar .brand .custom-caret {
+	font-size: 9px;
+	line-height: 19px;
+	vertical-align: middle;
 }
-
 .navbar .site-title {
 	font-family: "OpenSans";
 	text-transform: none;
