@@ -188,9 +188,9 @@ jQuery(document).ready(function($) {
 
 				if (response) {
 					try {
-						//resetForm($(data));
+						$('#edit-profile .alert').addClass('success').show().text(response.message);
 					} catch (err) {
-
+						$('#edit-profile .alert').addClass('warning').show().text(err);
 					}
 				}
 			});
