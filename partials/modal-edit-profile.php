@@ -70,11 +70,11 @@ $user_meta = get_user_meta( $current_user->ID, 'user_meta_'. str_replace( '/', '
 					</div>
 				</div>
 				<div class="span6">
-					<label class="control-label" for="zip">Zip <sup>*</sup></label>
+					<label class="control-label" for="zip">Zip Code <sup>*</sup></label>
 					<div class="controls">
-						<select name="zip" required>
+						<select name="zip_code" required>
 							<option></option>
-							<?php $selected_zip = get_user_meta( $current_user->ID, 'user_zip', true ); ?>
+							<?php $selected_zip = $user_meta['zip_code']; ?>
 							<option<?php selected( $selected_zip, '76201' ); ?>>76201</option>
 							<option<?php selected( $selected_zip, '76202' ); ?>>76202</option>
 							<option<?php selected( $selected_zip, '76203' ); ?>>76203</option>
