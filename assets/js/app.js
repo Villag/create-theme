@@ -67,8 +67,9 @@ jQuery(document).ready(function($) {
 
 						// When an anchor is clicked, add its ID as a hash to the URL
 						$('a').click(function() {
+
 							var hash = $(this).data('modal-id');
-							if( hash !== null ) {
+							if( typeof hash != 'undefined' ) {
 								window.location.hash = hash;
 							}
 						});
