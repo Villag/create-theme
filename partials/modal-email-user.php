@@ -15,7 +15,7 @@
 			<div class="control-group">
 				<label class="control-label" for="message">Message <sup>*</sup></label>
 					<div class="controls">
-						<textarea placeholder="Keep it light and take the conversation offline" tabindex="5" name="message" class="input-large" rows="10" required></textarea>
+						<textarea placeholder="Keep it light and take the conversation offline" tabindex="5" name="message" class="input-xlarge" rows="10" required></textarea>
 					</div>
 				</label>
 			</div>
