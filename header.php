@@ -55,7 +55,7 @@ jQuery(document).ready(function($) {
 						<li class="dropdown">
 
 							<a href="#" class="menu-item dropdown-toggle" data-toggle="dropdown">
-								<?php echo get_avatar( $current_user->ID, 25 ); ?>
+								<?php echo get_wp_user_avatar( $current_user->ID, 25 ); ?>
 								<span class="username"><?php echo $current_user->user_login; ?></span> <b class="caret"></b></a>
 
 							<ul class="dropdown-menu">
