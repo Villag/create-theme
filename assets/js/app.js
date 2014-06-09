@@ -2,6 +2,12 @@ jQuery(document).ready(function($) {
 
 	$('[data-toggle="tooltip"]').tooltip();
 
+	$('#loading').bind('ajaxStart', function(){
+		$(this).modal('show');
+	}).bind('ajaxStop', function(){
+		$(this).modal('hide');
+	});
+
 	function create_get_users(e) {
 		var xhr;
 

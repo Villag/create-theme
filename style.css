@@ -413,6 +413,18 @@ body .gform_wrapper .gform_footer {
 	padding: 20px;
 }
 
+#loading {
+	border: none;
+	box-shadow: none;
+	text-align: center;
+	background: none;
+}
+
+.modal-backdrop,
+.modal-backdrop.fade.in {
+	background: #333;
+}
+
 
 /* =Isotope
 -------------------------------------------------------------- */

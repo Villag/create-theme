@@ -30,6 +30,12 @@
 
 <?php wp_footer(); ?>
 
+<div id="loading" class="modal hide" tabindex="-1">
+
+	<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/preloader.gif" height="128" width="128" alt="Loading">
+
+</div><!-- .vcard -->
+
 <script type="text/javascript">
 var uvOptions = {};
 (function() {
