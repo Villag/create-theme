@@ -12,6 +12,8 @@ $user_meta = get_user_meta( $current_user->ID, 'user_meta_'. str_replace( '/', '
 	<div class="modal-body">
 		<div class="alert hide"></div>
 
+		<p><a href="#edit-avatar" role="button" data-toggle="modal" data-modal-id="edit-avatar" class="btn">Edit avatar</a></p>
+
 		<form id="user-profile-form" action="<?php the_permalink(); ?>" method="post">
 
 			<div class="row-fluid">
