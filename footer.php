@@ -10,7 +10,6 @@
  * @since Twenty Twelve 1.0
  */
 ?>
-	</div><!-- #main .wrapper -->
 </div><!-- #page -->
 
 <?php if( is_user_logged_in() ): ?>
