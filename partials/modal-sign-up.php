@@ -9,6 +9,10 @@
 	</div><!-- .modal-header -->
 
 	<div class="modal-body">
+	
+		<div class="alert alert-info">
+			<p>CreateDenton is for <strong>indviduals</strong> looking to find and connect with others in our city. We may add business/organization/band/group profiles at some point, but for now profiles are limited to people in order to help put faces to those that make Denton creative!</p>
+		</div>
 
 		<div class="row-fluid">
 
