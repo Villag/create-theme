@@ -36,8 +36,8 @@ jQuery(document).ready(function($) {
 					<a class="btn btn-link dropdown-toggle" data-toggle="dropdown" href="#"><?php echo esc_html( get_bloginfo( 'description' ) ); ?>  <span class="custom-caret">&#9660;</span></a>
 					<ul class="dropdown-menu">
 						<li><a href="<?php echo esc_url( network_home_url( '/digital' ) ); ?>">digital</a></li>
-						<li><a href="#">market (soon)</a></li>
-						<li><a href="#">music (soon)</a></li>
+						<li><a href="<?php echo esc_url( network_home_url( '/market' ) ); ?>">market</a></li>
+						<li><a href="<?php echo esc_url( network_home_url( '/music' ) ); ?>">music</a></li>
 					</ul>
 				</span>
 			</h1>
@@ -75,14 +75,14 @@ jQuery(document).ready(function($) {
 
 				<ul id="menu-primary" class="nav">
 					<li id="filter">
-                    	<ul id="filters" class="option-set" data-option-key="filter">
-                    		<?php
-                    		$user_categories = get_terms( array( 'user_category' ), array( 'hide_empty' => false ) );
+						<ul id="filters" class="option-set" data-option-key="filter">
+							<?php
+							$user_categories = get_terms( array( 'user_category' ), array( 'hide_empty' => false ) );
 							foreach ( $user_categories as $user_category ) { ?>
-					       		<li data-filter=".<?php echo $user_category->slug; ?>"><a href="#filter"><?php echo $user_category->name; ?></a></li>
-					       	<?php } ?>
-					       	<li data-filter="*"><a href="#filter">Reset</a></li>
-                        </ul>
+							<li data-filter=".<?php echo $user_category->slug; ?>"><a href="#filter"><?php echo $user_category->name; ?></a></li>
+							<?php } ?>
+							<li data-filter="*"><a href="#filter">Reset</a></li>
+						</ul>
 					</li>
 				</ul>
 			</div>
