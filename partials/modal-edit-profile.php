@@ -85,6 +85,7 @@ $user_meta = get_user_meta( $current_user->ID, 'user_meta_'. str_replace( '/', '
 							<option<?php selected( $selected_zip, '76206' ); ?>>76206</option>
 							<option<?php selected( $selected_zip, '76207' ); ?>>76207</option>
 							<option<?php selected( $selected_zip, '76208' ); ?>>76208</option>
+							<option<?php selected( $selected_zip, '76209' ); ?>>76209</option>
 						</select>
 					</div>
 				</div>
