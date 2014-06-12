@@ -2,26 +2,32 @@
 
 	<?php $page_data = get_page_by_title( 'about' ); ?>
 
-	<div class="modal-header">
+	<div class="modal-dialog">
+		<div class="modal-content">
 
-		<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+			<div class="modal-header">
 
-		<h3><?php echo $page_data->post_title; ?></h3>
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
 
-	</div><!-- .modal-header -->
+				<h3><?php echo $page_data->post_title; ?></h3>
 
-	<div class="modal-body">
+			</div><!-- .modal-header -->
 
-		<div class="row-fluid">
+			<div class="modal-body">
 
-			<div class="span12">
+				<div class="row-fluid">
 
-			<?php echo apply_filters('the_content', $page_data->post_content); ?>
+					<div class="span12">
 
-			</div>
+					<?php echo apply_filters('the_content', $page_data->post_content); ?>
 
-		</div><!-- .row-fluid -->
+					</div>
 
-	</div><!-- .modal-body -->
+				</div><!-- .row-fluid -->
+
+			</div><!-- .modal-body -->
+
+		</div>
+	</div>
 
 </div><!-- .modal -->

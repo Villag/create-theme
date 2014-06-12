@@ -2,15 +2,19 @@
 /**
  * The template for displaying the footer.
  *
- * Contains footer content and the closing of the
- * #main and #page div elements.
+ * Contains the closing of the #content div and all content after
  *
- * @package WordPress
- * @subpackage Twenty_Twelve
- * @since Twenty Twelve 1.0
+ * @package Create
  */
 ?>
+
+	</div><!-- #content -->
+
 </div><!-- #page -->
+
+<?php wp_footer(); ?>
+
+<?php get_template_part( 'partials/special', 'about' ); ?>
 
 <?php if( is_user_logged_in() ): ?>
 
@@ -27,21 +31,6 @@
 
 <?php endif; ?>
 
-<?php wp_footer(); ?>
-
-<div id="loading" class="modal hide" tabindex="-1">
-
-	<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/preloader.gif" height="128" width="128" alt="Loading">
-
-</div><!-- .vcard -->
-
-<script type="text/javascript">
-var uvOptions = {};
-(function() {
-	var uv = document.createElement('script'); uv.type = 'text/javascript'; uv.async = true;
-	uv.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'widget.uservoice.com/u9wFFHubVFFLBVve28tg.js';
-	var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(uv, s);
-})();
-</script>
+<div id="loading"></div>
 </body>
 </html>

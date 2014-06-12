@@ -1,32 +1,27 @@
-<li class="item person" style="background: #333;">
-	<a class="card" href="#about-createdenton" data-modal-id="about-createdenton" role="button" data-toggle="modal">
-		<img src="<?php echo esc_url( get_stylesheet_directory_uri() ); ?>/assets/img/createdenton.png" height="150" width="150" alt="CreateDenton Logo">
+<div id="about-createdenton" class="modal fade card-back" tabindex="-1">
 
-		<header class="brief">
-			<div class="primary-job">About</div>
-		</header>
-	</a><!-- .card -->
+	<div class="modal-dialog">
+		<div class="modal-content">
 
-</li><!-- .card -->
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+				<header>
+					<h3>About CreateDenton</h3>
+				</header>
+			</div><!-- .modal-header -->
 
-<div id="about-createdenton" class="modal hide fade card-back" tabindex="-1">
+			<div class="modal-body">
+				<img src="<?php echo esc_url( get_stylesheet_directory_uri() ); ?>/assets/img/createdenton.png" height="150" width="150" alt="CreateDenton Logo" class="thumbnail avatar pull-right">
+				<section class="note">
 
-	<div class="modal-header">
-		<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-		<header>
-			<h3>About CreateDenton</h3>
-		</header>
-	</div><!-- .modal-header -->
+					<?php $page_data = get_page_by_title( 'about' ); ?>
 
-	<div class="modal-body">
-		<img src="<?php echo esc_url( get_stylesheet_directory_uri() ); ?>/assets/img/createdenton.png" height="150" width="150" alt="CreateDenton Logo" class="thumbnail avatar pull-right">
-		<section class="note">
+					<?php if( $page_data ) { echo apply_filters('the_content', $page_data->post_content); } ?>
 
-			<?php $page_data = get_page_by_title( 'about' ); ?>
+				</section>
+			</div><!-- modal-body -->
 
-			<?php if( $page_data ) { echo apply_filters('the_content', $page_data->post_content); } ?>
-
-		</section>
-	</div><!-- modal-body -->
+		</div>
+	</div>
 
 </div><!-- .vcard -->

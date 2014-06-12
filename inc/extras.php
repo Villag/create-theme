@@ -4,7 +4,7 @@
  *
  * Eventually, some of the functionality here could be replaced by core features
  *
- * @package create
+ * @package Create
  */
 
 /**
@@ -79,11 +79,11 @@ add_filter( 'wp_title', 'create_wp_title', 10, 2 );
  * @global WP_Query $wp_query WordPress Query object.
  * @return void
  */
-function createcreateetup_author() {
+function create_setup_author() {
 	global $wp_query;
 
 	if ( $wp_query->is_author() && isset( $wp_query->post ) ) {
 		$GLOBALS['authordata'] = get_userdata( $wp_query->post->post_author );
 	}
 }
-add_action( 'wp', 'createcreateetup_author' );
+add_action( 'wp', 'create_setup_author' );
