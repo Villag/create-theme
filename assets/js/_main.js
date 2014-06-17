@@ -67,7 +67,7 @@ jQuery(document).ready(function($) {
 						});
 
 						// When the modal hides, remove the hash from the URL and unblur
-						$('.modal').on('hidden', function () {
+						$('.modal').on('hide.bs.modal', function (e) {
 							window.location.hash = '';
 							history.pushState('', document.title, window.location.pathname);
 						});

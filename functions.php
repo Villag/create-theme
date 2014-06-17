@@ -127,6 +127,11 @@ require get_template_directory() . '/inc/customizer.php';
 require get_template_directory() . '/inc/jetpack.php';
 
 /**
+ * Load Ajax registration file.
+ */
+require get_template_directory() . '/inc/registration.php';
+
+/**
  * Load Bootstrap walker.
  */
 require get_template_directory() . '/inc/wp_bootstrap_navwalker.php';
